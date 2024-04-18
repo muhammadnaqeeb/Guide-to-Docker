@@ -20,7 +20,7 @@ docker info
 # Dockerfile
 A Dockerfile contains the set of instructions for building a Docker Image. So, a Dockerfile is used to build a Docker Image which is then used as the template for creating one or more Docker containers. 
 
-![IMG_256](images/001.png)
+![IMG_256](/images/001.png)
 
 Image showing the steps to create a docker container. First you create the Dockerfile which is used to build the Docker Image which is finally used to run a Docker container.
 
@@ -60,7 +60,7 @@ These containers are compact, portable units in which you can start up an applic
 # Containers v/s VMs OR Containerization v/s Virtualization
 Containers and virtual machines are very similar resource virtualization technologies. Virtualization is the process in which a system singular resource like RAM, CPU, Disk, or Networking can be ‘virtualized’ and represented as multiple resources. The key differentiator between containers and virtual machines is that virtual machines virtualize an entire machine down to the hardware layers and containers only virtualize software layers above the operating system level.
 
-![](images/002.png)
+![](/images/002.png)
 
 **Traditional Server Operations:**
 
@@ -122,17 +122,17 @@ Example
 - Oracle VM VirtualBox
 
 ## OS Support and Architecture
-![IMG_256](images/003.png)
+![IMG_256](/images/003.png)
 
 VMs have the host OS and guest OS inside each VM. A guest OS can be any OS, like Linux or Windows, irrespective of the host OS. In contrast, Docker containers host on a single physical server with a host OS, which shares among them. Sharing the host OS between containers makes them light and increases the boot time. Docker containers are considered suitable to run multiple applications over a single OS kernel; whereas, virtual machines are needed if the applications or services required to run on different OS. 
 # Docker Hub
 Docker hub is the registry for docker images 
 
 # Docker Extension for vs-code
-![](images/004.png)
+![](/images/004.png)
 # Creating repository on docker hub and pushing a JS code on it
 ### **Step1: Create a docker file in the root directory of project**
-![](images/005.png)
+![](/images/005.png)
 
 Must spell exactly same.
 ### **Step2: Add instruction in Docker-file to  package our application**
@@ -142,7 +142,7 @@ FROM node:alpine
 ```
 - Typically we start from base images, this base image has bunch of file, we take those files and add additional files to it, we can start from Linux image and install node on top of it, as we have node.js project so we have to add it OR we can start from node image as this image is already build on top of Linux, these images are officially publish on docker hub
 
-![](images/006.png)
+![](/images/006.png)
 
 - Docker hub is the registry for docker images.
 - If you see docker hub, there are multiply node images, these node images are build on different distribution of Linux (different flavors of Linux). 
@@ -187,7 +187,7 @@ So, these instruction clearly documented the deployment process
 ```
 docker build -t hello-docker .
 ```
-![](images/007.png)
+![](/images/007.png)
 
 **Note:** Docker should be running in the background
 
@@ -200,17 +200,17 @@ OR
 ```
 docker image ls
 ```
-![](images/008.png)
+![](/images/008.png)
 ### **Step5: Run image**
 Now we can run the images on any computer that have docker, we don’t need to take care of node environment etc.
 ```
 docker run hello-docker
 ```
-![](images/009.png)
+![](/images/009.png)
 
 It does not depend on which repository we are in, it will run as it contain all the things ro run the application
 
-![](images/010.png)
+![](/images/010.png)
 
 ### **Step6: Upload Image to docker hub (Creating repository in cmd) - way 1**
 
@@ -222,7 +222,7 @@ Note: And name to repository should be in lowercase.
 ```
 docker tag hello-docker muhammadnaqeeb/hello-docker:v1.0
 ```
-![](images/011.png)
+![](/images/011.png)
 
 Run login command only first time
 ```
@@ -234,15 +234,15 @@ Push the image
 ```
 docker push muhammadnaqeeb/hello-docker:v1.0
 ```
-![](images/012.png)
+![](/images/012.png)
 
-![](images/013.png)
+![](/images/013.png)
 
 
 ### **Step6: Upload Image to docker hub (Creating repository online) - way 2**
 If you done this step on CMD, then there is no need for this step, only use one way
 
-![](images/014.png)
+![](/images/014.png)
 
 All steps will be same as way 1
 
@@ -251,13 +251,13 @@ All steps will be same as way 1
 
 This website has virtual environment of Linux, it is a complete OS where you can pull your images and rum them. It has Linux and docker only
 
-![](images/015.png)
+![](/images/015.png)
 
-![](images/016.png)
+![](/images/016.png)
 
-It don’t have node or anythink else
+It don't have node or anythink else
 
-![](images/017.png)
+![](/images/017.png)
 
 # Pull Docker Image and Run it
 **Pull**
@@ -285,27 +285,27 @@ A container is a runnable instance of an image. which is why you cannot delete a
 
 - As I am trying to delete image but it is giving me error
 
-![](images/018.png)
+![](/images/018.png)
 
 - Fail because there is a running instance of that image i.e. container
 
 Run ps command to see running containers
 
-![](images/019.png)
+![](/images/019.png)
 
 - Stop the container
 
-![](images/020.png)
+![](/images/020.png)
 
 - See we have one image
 
-![](images/021.png)
+![](/images/021.png)
 
 - Delete image
 
-![](images/022.png)
+![](/images/022.png)
 
 - No image left after delete
 
-![](images/023.png)
+![](/images/023.png)
 
